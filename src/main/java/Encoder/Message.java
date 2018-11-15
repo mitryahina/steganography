@@ -1,9 +1,12 @@
 package Encoder;
 
+import lombok.AllArgsConstructor;
 import lombok.ToString;
 
 
 @ToString
+
+
 public class Message {
     private String message;
 
@@ -20,11 +23,10 @@ public class Message {
     }
 
 
-    public String decode(String msg){
+    public String decode(){
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < msg.length(); i += 2) {
-            int a = Integer.parseInt(msg.substring(i, i+2));
-            System.out.println((char)a);
+        for (int i = 0; i < message.length(); i += 2) {
+            int a = Integer.parseInt(message.substring(i, i+2));
             sb.append((char)a);
         }
         return sb.toString();
