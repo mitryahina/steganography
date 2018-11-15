@@ -23,8 +23,6 @@ public class Picture {
 
         String msgToInsert = String.valueOf(Math.abs(msg.length())).length() + Integer.toString(msg.length()) + msg;
         int msgIndex = 0;
-        System.out.println("To insert " + msgToInsert);
-
         try{
             for (int i = 0; i < img.getWidth(); i++) {
                 for (int j = 0; j < img.getHeight(); j++) {

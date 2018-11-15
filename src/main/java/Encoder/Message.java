@@ -25,7 +25,7 @@ public class Message {
 
     public String decode(){
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < message.length(); i += 2) {
+        for (int i = 0; i < message.length() - 1; i += 2) {
             int a = Integer.parseInt(message.substring(i, i+2));
             sb.append((char)a);
         }
